@@ -260,19 +260,105 @@
           </button>
         </div>
       </section>
+      <section class="container mt-5">
+        <div class="row d-flex flex-column-reverse flex-md-row">
+          <div class="col-12 col-md-4">
+            <img
+              class="img-fluid"
+              src="./img/iphone-illustration-sec.png"
+              alt="Intefaz del pad numerico de iphone 'olvide mi contraseña'"
+            />
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 text-center text-md-start">
+                <h4>Tu seguridad como prioridad</h4>
+                <p>
+                  Seguimos las mejores prácticas en cyberseguridad sin
+                  complicarte tu operación diaria
+                </p>
+              </div>
+              <div class="col-12 col-md-6 my-2">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-center flex-md-column align-items-md-start justify-content-md-start"
+                    >
+                      <i class="bi bi-eye text-danger fs-4 me-2"></i>
+                      <h5 class="card-title mb-0">Biometría</h5>
+                    </div>
+                    <p class="card-text mt-md-2">
+                      Nuestra tecnología te permite acceder a tu cuenta usando
+                      ty huella digital o tu cara.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-2">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-center flex-md-column align-items-md-start justify-content-md-start"
+                    >
+                      <i class="bi bi-fingerprint text-primary fs-4 me-2"></i>
+                      <h5 class="card-title mb-0">Segundo Factor</h5>
+                    </div>
+                    <p class="card-text mt-md-2">
+                      Usamos un Token invisible para todas las operaciones que
+                      hagas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-2">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-center flex-md-column align-items-md-start justify-content-md-start"
+                    >
+                      <i class="bi bi-puzzle text-info fs-4 me-2"></i>
+                      <h5 class="card-title mb-0">Personal</h5>
+                    </div>
+                    <p class="card-text mt-md-2">
+                      Vas a poder ingresar desde un dispositivo a la vez en tu
+                      cuenta.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-2">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-center flex-md-column align-items-md-start justify-content-md-start"
+                    >
+                      <i class="bi bi-robot text-success fs-4 me-2"></i>
+                      <h5 class="card-title mb-0">100% encriptado</h5>
+                    </div>
+                    <p class="card-text mt-md-2">
+                      Todas las transacciones son encriptadas para tu mayor
+                      seguridad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Modal crea tu cuenta-->
     <div
       class="modal fade"
-      id="Modalcreatucuenta"
+      id="modalCrearCuenta"
       tabindex="-1"
-      aria-labelledby="ModalcreatucuentaLabel"
+      aria-labelledby="modalCrearCuentaLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-5" id="ModalcreatucuentaLabel">
+            <h2 class="modal-title fs-5" id="modalCrearCuentaLabel">
               Crea tu cuenta
             </h2>
             <button
@@ -283,26 +369,64 @@
             ></button>
           </div>
           <div class="modal-body">
-            Completa los siguientes ddatos para crear tu cuenta:
+            <p>Completa los siguientes pasos para crear tu cuenta:</p>
             <form>
               <div class="mb-3">
-                <label for="InputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="nombre" class="form-label"
+                  >Nombre y Apellido *</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  aria-describedby="nombreHelp"
+                  placeholder="Ejemplo: Luchiano Guiot"
+                  minlength="2"
+                  maxlength="100"
+                  required
+                />
               </div>
               <div class="mb-3">
-                <label for="InputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="InputPassword1">
+                <label for="InputEmail1" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="InputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="ejemplo@gmail.com"
+                  minlength="3"
+                  maxlength="254"
+                  required
+                />
               </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="Check1">
-                <label class="form-check-label" for="Check1">Check me out</label>
+              <div class="mb-3">
+                <label for="inputPassword1" class="form-label"
+                  >Contraseña *</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword1"
+                  placeholder="**********"
+                  required
+                />
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="mb-3">
+                <label for="inputPassword2" class="form-label"
+                  >Repetir contraseña *</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword2"
+                  placeholder="**********"
+                  required
+                />
+              </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </div>
       </div>
