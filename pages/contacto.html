@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>CryptoFin</title>
   </head>
   <body>
     <header>
@@ -56,56 +56,85 @@
     </header>
     <main>
       <section class="bg-primary-subtle py-4">
-        <h1 class="text-center marca">Contacto</h1>
+        <h1 class="text-center marca">Contactos</h1>
       </section>
-      <section class="container my-3">
-        <div class="row">
-          <article class="col-12 col-md-6">
+      <section class="container">
+        <div class="row my-3">
+          <article class="col-12 col-md-6 mb-3">
             <form>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
+                <label for="nombre" class="form-label"
+                  >Nombre y Apellido *</label
                 >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  aria-describedby="nombreHelp"
+                  placeholder="Ejemplo: Luchiano Guiot"
+                  minlength="2"
+                  maxlength="100"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="inputEmail1" class="form-label">Email *</label>
                 <input
                   type="email"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="inputEmail1"
                   aria-describedby="emailHelp"
+                  placeholder="ejemplo@gmail.com"
+                  minlength="3"
+                  maxlength="254"
+                  required
                 />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
+                <label for="telefono" class="form-label">Teléfono:</label>
                 <input
-                  type="password"
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  minlength="7"
+                  maxlength="15"
+                  pattern="^\+?[0-9\s\-]{7,15}$"
+                  placeholder="+54 9 11 1234 5678"
                 />
-              </div>
-              <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check me out</label
+                <small class="form-text text-muted"
+                  >Ingrese su número con código de país, sin letras ni
+                  caracteres especiales.</small
                 >
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="mb-3">
+                <label for="consulta" class="form-label"
+                  >Ingrese su consulta *</label
+                >
+                <textarea
+                  class="form-control resize-none"
+                  name="consulta"
+                  id="consulta"
+                  required
+                  minlength="10"
+                  maxlength="255"
+                ></textarea>
+              </div>
+              <small class="form-text text-muted">
+                Los campos con (*) son obligarios
+              </small>
+              <div class="my-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
             </form>
           </article>
           <article class="col-12 col-md-6">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.106067949416!2d-65.20974192373937!3d-26.83657849002841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses!2sar!4v1740442319204!5m2!1ses!2sar"
-              class="w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.106067949515!2d-65.20974192565427!3d-26.836578490024984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1740442344702!5m2!1ses-419!2sar"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              class="w-100 h-100"
             ></iframe>
           </article>
         </div>
