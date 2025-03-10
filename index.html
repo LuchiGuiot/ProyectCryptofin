@@ -381,7 +381,7 @@
           </div>
           <div class="modal-body">
             <p>Completa los siguientes pasos para crear tu cuenta:</p>
-            <form>
+            <form id="formCrearCuenta">
               <div class="mb-3">
                 <label for="nombre" class="form-label"
                   >Nombre y Apellido *</label
@@ -391,7 +391,7 @@
                   class="form-control"
                   id="nombre"
                   aria-describedby="nombreHelp"
-                  placeholder="Ejemplo: Marcos Joel Tebis"
+                  placeholder="Ejemplo: Luchiano Guiot"
                   minlength="2"
                   maxlength="100"
                   required
@@ -437,7 +437,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" form="formCrearCuenta">Enviar</button>
           </div>
         </div>
       </div>
